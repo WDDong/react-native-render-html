@@ -128,7 +128,7 @@ export default class HTMLImage extends PureComponent {
     get placeholderImage () {
         const defaultImage = require('./icon_default_40x40.png');
         return (
-            <View style={{ width: this.props.imagesInitialDimensions.width, height: this.props.imagesInitialDimensions.height, justifyContent: 'center', alignItems: 'center' }}>
+            <View style={{ width: Dimensions.get('window').width, height: this.props.imagesInitialDimensions.height, justifyContent: 'center', alignItems: 'center' }}>
                 {/* { this.props.alt ? <Text style={{ textAlign: 'center', fontStyle: 'italic' }}>{ this.props.alt }</Text> : false } */}
                 <Image source={defaultImage} />
             </View>
