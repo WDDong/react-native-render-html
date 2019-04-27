@@ -95,7 +95,7 @@ export default class HTMLImage extends PureComponent {
                     return this.mounted && this.setState({ width: originalWidth, height: originalHeight });
                 }
                 const optimalWidth = imagesMaxWidth <= originalWidth ? imagesMaxWidth : originalWidth;
-                const optimalHeight = (optimalWidth * originalHeight) / originalWidth;
+                const optimalHeight = parseInt((optimalWidth * originalHeight) / originalWidth);
                 this.mounted && this.setState({ width: optimalWidth, height: optimalHeight, indeterminate: false,  error: false });
             },
             () => {
